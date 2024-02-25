@@ -1,0 +1,76 @@
+﻿@charset "utf-8";
+@font-face {
+   font-family: Quicksand;
+   src: url('Quicksand-Regular.woff') format('woff'),
+        url('Quicksand-Regular.ttf') format('truetype');
+    font-weight: bold;    
+}
+
+html {
+    background-color: rgb (235, 177, 131);
+    background-color: hsl (27, 72%, 72%);
+}
+body {
+    color:rgb(100, 100, 100);
+    background-color:ivory;
+    font-family: Verdana, Geneva, sans-serif;
+}
+
+
+section h1 {color:red;}
+
+h1         { font-size:2.2em;
+             font-family: Quickstand, Verdana, Geneva, sans-serif;
+             letter-spacing: 0.1em;
+             color: black
+            /*backgound-color:white*/}
+h2         { font-size:1.5em;
+             font-family: Quickstand, Verdana, Geneva, sans-serif;
+             letter-spacing: 0.1em; color: blue
+            /* backgound-color:white*/}
+
+
+h3         { font-size: 1em;
+            font-family: Quickstand, Verdana, Geneva, sans-serif;
+            letter-spacing: 0.1em; color: green
+            /* backgound-color:white*/}
+
+
+
+/* Navigation Styles */	
+
+
+nav > ul {
+    line-height: 2em;
+    list-style-type: none;
+    padding-left: 5px;
+}
+
+
+nav > ul > li > a:link, nav > ul > li > a:visited {
+    color: rgb(222, 159, 25, 0.858);
+    text-decoration: none;
+}
+
+nav > ul > li > a:hover, nav > ul > li > a:active {
+    color: rgb(22, 218, 110);
+    text-decoration: underline;
+}
+
+
+/* Footer Styles */
+
+
+body > footer address {
+    background-color: rgb(224, 101, 13);
+    color: rgba(255, 255, 255, 0.835);
+    font: normal small-caps bold 0.9em/3em
+          Quicksand, Verdana, Geneva, sans-serif;
+    text-align: center;
+
+
+}
+
+
+
+
