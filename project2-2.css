@@ -1,0 +1,211 @@
+@charset "utf-8";
+@font-face {
+	font-family: Champagne;
+	src: url(cac_champagne.woff) format('woff'),
+	     url(cac_champagne.ttf) format('ttf');
+}
+
+/*
+   New Perspectives on HTML5 and CSS3, 8th Edition
+   Tutorial 3
+   Tutorial Case
+   
+   Style Sheet for Grids used in the Pandaisia Chocolates website
+   Author:Hasan Mohammad
+   Date:  03/19/2024
+   
+   Filename: project2-2.css
+
+*/
+
+
+/* HTML and Body Styles */
+
+html {
+    background-color: rgb(98, 55, 11);
+    font-family: Verdana, Geneva, Arial, sans-serif; 	
+ }
+ 
+ body {
+    background-color: rgb(247, 254, 255);  
+ }
+
+ 
+
+/* Page Header Styles */
+
+
+body > header > img {
+    /*  display:grid; */
+    display: block;
+    width: 100%;
+ }
+
+ 
+ nav.horizontalNavigation > ul > li {
+    display: block;
+    float: left;
+    width: 20%;
+ }
+
+ /*
+ body > header > nav.horizontalNavigation li {
+    width: 20%;
+ }
+
+ */
+
+
+
+/* Horizontal Navigation Styles */
+
+nav.horizontalNavigation a {
+    background-color: rgb(192, 255, 56);
+    font-family: Champagne, cursive;
+    font-size: 1.4em;
+    line-height: 1.8em;
+    text-align: center;
+ }  
+ 
+ 
+ nav.horizontalNavigation a:link, 
+ nav.horizontalNavigation a:visited {
+    color: rgb(50, 3, 235);
+ }
+ 
+ nav.horizontalNavigation a:hover, 
+ nav.horizontalNavigation a:active {
+    background-color: rgb(11, 234, 85);
+ }   
+
+
+/* Grid Styles for Page Body */
+
+/* HTML Page 215 */
+/* displays the children of the body element within a grid  */
+body {
+    /* creating CSS Grid */
+    display: grid;
+    /* HTML 217 fr is fractional unit */
+    grid-template-columns:  2fr 2fr;
+    
+
+    /* HTML 228 Placing Gris Items by Area  */
+
+    /* Personnel note: This section need to match with page elements to grid areas */
+    grid-template-areas: "header    header"
+                         "intro     intro"
+                         "articles  aside"
+                         "footer    footer";
+
+    /* HTML 233 Set the size of the column gap */
+    grid-column-gap: 10px;
+
+}
+
+/* HTML 223  Placing Items within a Grid */
+
+
+/* HTML 224 Placing Items by Row and Column  */
+/* HTML 227 Place the body header across the first row */
+
+
+
+body > header {
+    grid-row: 1;
+    grid-column: 1/-1;
+}
+
+
+/* HTML 230 Assign page elements to grid areas   */
+
+/* body > header {grid-area: header;} */
+body > article {grid-area: intro;}
+body > aside {grid-area: aside;}
+body > section {grid-area: articles;}
+body > footer {grid-area: footer;}
+
+
+/* Grid Styles for Nested Grid */
+/* displays the children of the section element within a grid  */
+section {
+    /* creating CSS Grid */
+    display: grid;
+    /* HTML 218 repeating Columns and Rows */
+    grid-template-columns: repeat(2, 2fr);
+}
+
+/* HTML 230 Assigning elements to grid areas  */
+/* extends the h1 heading from the first through second row gridlines
+ and the first through third column gridlines */
+
+ 
+ 
+body > section > h1 {
+    grid-area: 1/1/2/3;
+}
+
+
+body > aside > h1 {
+    grid-area: 1/1/2/3;
+}
+
+
+/* Don't need outline for this lab */
+/* HTML 222 */
+/* Outlining a Grid */
+
+
+/*
+body > * {
+    outline: 2px dashed red;
+}
+
+section > * {
+    outline: 2px dashed blue;
+}
+
+*/
+/* Grid Styles for Nested Grid */
+
+
+
+
+body > aside, section {
+    background-color: rgb(224, 249, 181);
+ }
+
+
+/* Copied from pc_styles2.css */
+body > section > h1, body > aside > h1 {
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    
+    /*padding: 0.5em 0;*/
+ }
+
+ dl > dt {
+    color: rgb(70, 5, 5);
+    margin: 1em;
+    /* font-family: cursive;*/
+    font-family: 'Haettenschweiler', 'Arial Narrow Bold', sans-serif;
+    
+ }
+ 
+ dl > dd {
+    margin: 0 1em 0 1em;
+    color: rgb(2, 148, 53);
+    /* font-family: cursive; */
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    text-align:  right;
+
+ }
+
+/* Footer Styles */
+
+footer {
+    color: rgb(7, 7, 5);
+    background-color: rgb(206, 77, 21);
+    font-size: 0.9em;
+    padding: 1em 0;
+    text-align: center;
+ }
